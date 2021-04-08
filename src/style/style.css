@@ -1,4 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Marcellus&family=Mulish:wght@400;600;700;800&family=Poppins:wght@500&display=swap");
+html {
+  font-size: 10px;
+}
+
 body {
-  background-color: red;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 144rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: 0 auto;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-item {
+  margin: 0 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link::after {
+  content: "";
+  opacity: 0;
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  margin-top: 0.5rem;
+  background: #3269ff;
+  background: linear-gradient(151deg, #326cff, #26fff2 100%);
+  border-radius: 5rem;
+}
+
+.nav-link.active {
+  color: white;
+}
+
+.nav-link.active::after {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
