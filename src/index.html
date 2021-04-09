@@ -29,6 +29,8 @@ body {
   max-width: 144rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   margin: 0 auto;
 }
 
@@ -72,6 +74,47 @@ body {
 .nav-link.active::after {
   opacity: 1;
 }
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.control-item {
+  margin-left: 7.5rem;
+}
+
+.control-btn {
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  display: block;
+}
+
+.control-btn_search {
+  background-image: url(images/search.svg);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.control-btn_notice {
+  background-image: url(images/notice.svg);
+  width: 2.13rem;
+  height: 2.35rem;
+}
+
+.control-btn_account {
+  background-image: url(images/account.svg);
+  width: 1.8rem;
+  height: 1.92rem;
+}
 /*# sourceMappingURL=style.css.map */
     </style>
   </head>
@@ -88,13 +131,13 @@ body {
         </nav>
         <ul class="control"> 
           <li class="control-item"> 
-            <button class="control-btn control-btn-search"></button>
+            <button class="control-btn control-btn_search"></button>
           </li>
           <li class="control-item"> 
-            <button class="control-btn control-btn-notice"></button>
+            <button class="control-btn control-btn_notice"></button>
           </li>
           <li class="control-item"> 
-            <button class="control-btn control-btn-account"></button>
+            <button class="control-btn control-btn_account"></button>
           </li>
         </ul>
       </div>
