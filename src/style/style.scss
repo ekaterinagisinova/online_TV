@@ -107,6 +107,64 @@ button{
         }
     }
 }
+.section{
+    padding-top: 5rem;
+    &__h2{
+        font-size: 2.8rem;
+        line-height: 2rem;        
+        padding-left: 2rem;
+        padding-right: 2.5rem;
+        position: relative;
+        font-weight: 700;
+        display: inline-block;
+        &::before{
+            content: "";            
+            display: block;
+            width: 0.8rem;
+            height: 3.5rem;            
+            background:$bg-gradient-safe;
+            background: $bg-gradient;
+            border-radius: 5rem;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 1.7rem);
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 1.1rem;
+            height: 1.5rem;             
+            position: absolute;
+            background-image: url(images/title-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: calc(50% - 0.7rem);
+            left: 100%;
+
+        }
+        &-link{
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    &__btn{        
+        border: none;
+        border-radius: 10rem;
+        padding: 1.5rem 3rem;
+        font-family: 'Mulish', sans-serif;
+        font-weight: 800;  
+        cursor: pointer;           
+        background:$bg-gradient-safe;
+        background: $bg-gradient;
+        color: $white;
+        box-shadow: 0px 4px 50px rgba($bg-gradient-safe, 0.5);
+        transition: 0.2s ease box-shadow;
+        margin-top: 5.5rem;
+        &:hover{
+            box-shadow: 0px 0px 0px rgba($bg-gradient-safe, 0.5);
+        }
+    }
+}
 .section-banner{
     border-bottom: 0.1rem solid #2F2E2E;
     position: relative;
@@ -115,6 +173,7 @@ button{
         position: absolute;
         right: 0;
         z-index: -1;
+        height: 100%;
     }
 }
 .banner{    
@@ -218,6 +277,192 @@ button{
                 background-color: transparent;
                 color: $white;
             }
+        }
+    }
+}
+
+.movies{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.1rem;
+    &-item{
+        box-shadow: 0px 0px 0px rgba(44, 176, 249, 0.0);
+        transition: 0.2s ease box-shadow;
+        border-radius: 2rem;
+        flex: 0 0 14%;
+        &:hover{
+            box-shadow: 0px 0px 20px rgba(44, 176, 249, 0.5);
+        }
+    }
+    &__link{
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 30.9rem;
+        border-radius: 2rem;
+    }
+    &__img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: cover;
+    }
+}
+.genres{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 2.1rem;
+    &-item{
+        flex: 0 0 23.7%;
+        border-radius: 2rem;
+        padding: 4.8rem 1rem 3.8rem;
+        box-sizing: border-box;
+        margin-bottom: 2.7rem;
+        &__romance{
+            background: linear-gradient(109.31deg, #FD093F 2.4%, #F383F1 100%);
+        }
+        &__drama{
+            background: linear-gradient(114.5deg, #0FFFDA 2.22%, #3CDB77 68.84%);
+        }
+        &__historical{
+            background: linear-gradient(109.31deg, #B936FF 2.4%, #57DEDA 100%);
+        }
+        &__action{
+            background: linear-gradient(109.31deg, #FD093F 2.4%, #FB1378 2.41%, #FCCB1A 100%);
+        }
+        &__sci-fi{
+            background: linear-gradient(109.31deg, #FF6472 2.4%, #FDA75D 100%);
+        }
+        &__horror{
+            background: linear-gradient(110.16deg, #13547A 2.37%, #80D0C7 96.77%);
+        }
+        &__comedy{
+            background: linear-gradient(109.93deg, #FFF77B 2.37%, #FFBF42 50%);
+        }
+        &__documentary{
+            background: linear-gradient(109.31deg, #1FA2FF 2.4%, #1FA2FF 2.41%, #1F535C 97.46%);
+        }        
+    }
+    &-icon{
+        height: 8rem;
+        position: relative;
+        overflow: hidden;
+    }
+    &-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: cover;
+    }
+    &__title{
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin: .2rem 0 0 0;
+    }
+}
+.actors{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 2.1rem;
+    &-item{
+        flex: 0 0 14%;
+    }
+    &__link{
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 19rem;
+        height: 19rem;
+        border-radius: 100%;
+    }
+    &__img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: cover;
+        width: 19rem;
+        height: 19rem;
+    }
+}
+.marketing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 2.1rem;
+    &-item{
+        flex: 0 0 50%;
+        border-radius: 2rem;
+        &:first-child{
+            .marketing__link{
+                border-radius: 2rem 0 0 2rem;
+            }
+        }
+        &:last-child{
+            .marketing__link{
+                border-radius:  0 2rem 2rem 0;
+            }
+        }
+    }
+    &__link{
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 34.1rem;
+    }
+    &__img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: cover;
+    }
+}
+.offer{
+    max-width: 122.4rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(images/offer_bg.png);
+    padding: 7.2rem 14.7rem 7.2rem 5.7rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 7rem;
+    margin-bottom: 12.1rem;
+    box-sizing: border-box;
+    &__title{
+        font-size: 6.4rem;
+        font-weight: 700;
+        max-width: 80rem;
+        line-height: 1;
+        margin: 0;
+    }
+    &__btn{        
+        border: none;
+        border-radius: 10rem;
+        padding: 1.5rem 3rem;
+        font-family: 'Mulish', sans-serif;
+        font-weight: 800;  
+        cursor: pointer;           
+        background:$bg-gradient-safe;
+        background: $bg-gradient;
+        color: $white;
+        box-shadow: 0px 4px 50px rgba($bg-gradient-safe, 0.5);
+        transition: 0.2s ease box-shadow;
+        &:hover{
+            box-shadow: 0px 0px 0px rgba($bg-gradient-safe, 0.5);
         }
     }
 }

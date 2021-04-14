@@ -133,6 +133,73 @@ button:focus {
   height: 1.92rem;
 }
 
+.section {
+  padding-top: 5rem;
+}
+
+.section__h2 {
+  font-size: 2.8rem;
+  line-height: 2rem;
+  padding-left: 2rem;
+  padding-right: 2.5rem;
+  position: relative;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.section__h2::before {
+  content: "";
+  display: block;
+  width: 0.8rem;
+  height: 3.5rem;
+  background: #3269ff;
+  background: linear-gradient(151deg, #326cff, #26fff2 100%);
+  border-radius: 5rem;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1.7rem);
+}
+
+.section__h2::after {
+  content: '';
+  display: block;
+  width: 1.1rem;
+  height: 1.5rem;
+  position: absolute;
+  background-image: url(images/title-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: calc(50% - 0.7rem);
+  left: 100%;
+}
+
+.section__h2-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.section__btn {
+  border: none;
+  border-radius: 10rem;
+  padding: 1.5rem 3rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  background: #3269ff;
+  background: linear-gradient(151deg, #326cff, #26fff2 100%);
+  color: #fff;
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 105, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 105, 255, 0.5);
+  -webkit-transition: 0.2s ease box-shadow;
+  transition: 0.2s ease box-shadow;
+  margin-top: 5.5rem;
+}
+
+.section__btn:hover {
+  -webkit-box-shadow: 0px 0px 0px rgba(50, 105, 255, 0.5);
+          box-shadow: 0px 0px 0px rgba(50, 105, 255, 0.5);
+}
+
 .section-banner {
   border-bottom: 0.1rem solid #2F2E2E;
   position: relative;
@@ -143,6 +210,7 @@ button:focus {
   position: absolute;
   right: 0;
   z-index: -1;
+  height: 100%;
 }
 
 .banner {
@@ -270,6 +338,274 @@ button:focus {
   background-color: transparent;
   color: #fff;
 }
+
+.movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2.1rem;
+}
+
+.movies-item {
+  -webkit-box-shadow: 0px 0px 0px rgba(44, 176, 249, 0);
+          box-shadow: 0px 0px 0px rgba(44, 176, 249, 0);
+  -webkit-transition: 0.2s ease box-shadow;
+  transition: 0.2s ease box-shadow;
+  border-radius: 2rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14%;
+          flex: 0 0 14%;
+}
+
+.movies-item:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(44, 176, 249, 0.5);
+          box-shadow: 0px 0px 20px rgba(44, 176, 249, 0.5);
+}
+
+.movies__link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 30.9rem;
+  border-radius: 2rem;
+}
+
+.movies__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.genres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  margin-top: 2.1rem;
+}
+
+.genres-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 23.7%;
+          flex: 0 0 23.7%;
+  border-radius: 2rem;
+  padding: 4.8rem 1rem 3.8rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 2.7rem;
+}
+
+.genres-item__romance {
+  background: linear-gradient(109.31deg, #FD093F 2.4%, #F383F1 100%);
+}
+
+.genres-item__drama {
+  background: linear-gradient(114.5deg, #0FFFDA 2.22%, #3CDB77 68.84%);
+}
+
+.genres-item__historical {
+  background: linear-gradient(109.31deg, #B936FF 2.4%, #57DEDA 100%);
+}
+
+.genres-item__action {
+  background: linear-gradient(109.31deg, #FD093F 2.4%, #FB1378 2.41%, #FCCB1A 100%);
+}
+
+.genres-item__sci-fi {
+  background: linear-gradient(109.31deg, #FF6472 2.4%, #FDA75D 100%);
+}
+
+.genres-item__horror {
+  background: linear-gradient(110.16deg, #13547A 2.37%, #80D0C7 96.77%);
+}
+
+.genres-item__comedy {
+  background: linear-gradient(109.93deg, #FFF77B 2.37%, #FFBF42 50%);
+}
+
+.genres-item__documentary {
+  background: linear-gradient(109.31deg, #1FA2FF 2.4%, #1FA2FF 2.41%, #1F535C 97.46%);
+}
+
+.genres-icon {
+  height: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.genres-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.genres__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: .2rem 0 0 0;
+}
+
+.actors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 2.1rem;
+}
+
+.actors-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14%;
+          flex: 0 0 14%;
+}
+
+.actors__link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 19rem;
+  height: 19rem;
+  border-radius: 100%;
+}
+
+.actors__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 19rem;
+  height: 19rem;
+}
+
+.marketing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 2.1rem;
+}
+
+.marketing-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  border-radius: 2rem;
+}
+
+.marketing-item:first-child .marketing__link {
+  border-radius: 2rem 0 0 2rem;
+}
+
+.marketing-item:last-child .marketing__link {
+  border-radius: 0 2rem 2rem 0;
+}
+
+.marketing__link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 34.1rem;
+}
+
+.marketing__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.offer {
+  max-width: 122.4rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: url(images/offer_bg.png);
+  padding: 7.2rem 14.7rem 7.2rem 5.7rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 7rem;
+  margin-bottom: 12.1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.offer__title {
+  font-size: 6.4rem;
+  font-weight: 700;
+  max-width: 80rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.offer__btn {
+  border: none;
+  border-radius: 10rem;
+  padding: 1.5rem 3rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  background: #3269ff;
+  background: linear-gradient(151deg, #326cff, #26fff2 100%);
+  color: #fff;
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 105, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 105, 255, 0.5);
+  -webkit-transition: 0.2s ease box-shadow;
+  transition: 0.2s ease box-shadow;
+}
+
+.offer__btn:hover {
+  -webkit-box-shadow: 0px 0px 0px rgba(50, 105, 255, 0.5);
+          box-shadow: 0px 0px 0px rgba(50, 105, 255, 0.5);
+}
 /*# sourceMappingURL=style.css.map */
     </style>
   </head>
@@ -307,6 +643,109 @@ button:focus {
             <button class="banner-control__btn banner-control__btn-main">Watch</button>
             <button class="banner-control__btn banner-control__btn-more">More information</button>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container"> 
+        <h2 class="section__h2"><a class="section__h2-link" href="#">Trending TV Shows  </a></h2>
+        <div class="movies"> 
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_01.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_02.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_03.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_04.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_05.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_06.png" alt="poster"></a></div>
+        </div>
+        <h2 class="section__h2"><a class="section__h2-link" href="#">Trending Movies  </a></h2>
+        <div class="movies"> 
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_01.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_02.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_03.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_04.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_05.png" alt="poster"></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"> <img class="movies__img" src="../src/images/posterts/poster_06.png" alt="poster"></a></div>
+        </div>
+        <button class="section__btn"> See more  </button>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container"> 
+        <h2 class="section__h2"><a class="section__h2-link" href="#">Popular Genres  </a></h2>
+        <div class="genres">
+          <div class="genres-item genres-item__romance">
+            <div class="genres-icon"><img class="genres-image" src="../src/images/genders/romance.svg" alt="logo"></div>
+            <h3 class="genres__title">Romance</h3>
+          </div>
+          <div class="genres-item genres-item__drama">
+            <div class="genres-icon"><img class="genres-image" src="../src/images/genders/drama.svg" alt="logo"></div>
+            <h3 class="genres__title">Drama</h3>
+          </div>
+          <div class="genres-item genres-item__historical">
+            <div class="genres-icon"><img class="genres-image" src="../src/images/genders/historical.svg" alt="logo"></div>
+            <h3 class="genres__title">Historical</h3>
+          </div>
+          <div class="genres-item genres-item__action">
+            <div class="genres-icon"><img class="genres-image" src="../src/images/genders/action.svg" alt="logo"></div>
+            <h3 class="genres__title">Action</h3>
+          </div>
+          <div class="genres-item genres-item__sci-fi">
+            <div class="genres-icon"><img class="genres-image" src="../src/images/genders/sci-fi.svg" alt="logo"></div>
+            <h3 class="genres__title">Sci-fi</h3>
+          </div>
+          <div class="genres-item genres-item__horror">
+            <div class="genres-icon"><img class="genres-image" src="../src/images/genders/horror.svg" alt="logo"></div>
+            <h3 class="genres__title">Horror</h3>
+          </div>
+          <div class="genres-item genres-item__comedy">
+            <div class="genres-icon"><img class="genres-image" src="../src/images/genders/comedy.svg" alt="logo"></div>
+            <h3 class="genres__title">Comedy</h3>
+          </div>
+          <div class="genres-item genres-item__documentary">
+            <div class="genres-icon"><img class="genres-image" src="../src/images/genders/documentary.svg" alt="logo"></div>
+            <h3 class="genres__title">Documentary</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container"> 
+        <h2 class="section__h2"><a class="section__h2-link" href="#">Popular Actors & Directors </a></h2>
+        <div class="actors">
+          <div class="actors-item"><a class="actors__link" href="#"><img class="actors__img" src="../src/images/actors/actor_01.png" alt="actor"></a>
+            <h3 class="actors__title">Samantha Bowen</h3>
+          </div>
+          <div class="actors-item"><a class="actors__link" href="#"><img class="actors__img" src="../src/images/actors/actor_02.png" alt="actor"></a>
+            <h3 class="actors__title">Rhys Birch</h3>
+          </div>
+          <div class="actors-item"><a class="actors__link" href="#"><img class="actors__img" src="../src/images/actors/actor_03.png" alt="actor"></a>
+            <h3 class="actors__title">James Holloway</h3>
+          </div>
+          <div class="actors-item"><a class="actors__link" href="#"><img class="actors__img" src="../src/images/actors/actor_04.png" alt="actor"></a>
+            <h3 class="actors__title">Joshua Walton</h3>
+          </div>
+          <div class="actors-item"><a class="actors__link" href="#"><img class="actors__img" src="../src/images/actors/actor_05.png" alt="actor"></a>
+            <h3 class="actors__title">Patrick Elliott</h3>
+          </div>
+          <div class="actors-item"><a class="actors__link" href="#"><img class="actors__img" src="../src/images/actors/actor_06.png" alt="actor"></a>
+            <h3 class="actors__title">Morgan O'Neill</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container"> 
+        <div class="marketing"> 
+          <div class="marketing-item"><a class="marketing__link" href="#"> </a><img src="../src/images/marketing_01.png" alt="marketing"></div>
+          <div class="marketing-item"><a class="marketing__link" href="#"> </a><img src="../src/images/marketing_02.png" alt="marketing"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container"> 
+        <div class="offer"> 
+          <h2 class="offer__title">Are You New Here ? Don’t&nbsp;wait, Register Now. </h2>
+          <button class="offer__btn">Register Now</button>
         </div>
       </div>
     </section>
